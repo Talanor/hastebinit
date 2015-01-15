@@ -55,6 +55,7 @@ useful for keybindings.
         data = subprocess.check_output(["xclip", "-out"])
     else:
         data = args.file.read()
+    data = data.encode('utf-8')
 
     if args.xclip_output:
         # Set empty selection before doing remote requests.
